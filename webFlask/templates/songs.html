@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+<h1 class="text-lg-cener">All songs</h1>
+
+<table class="table table-hover border-2 table-striped">
+  <thead>
+    <th scope="col">SongId</th>
+    <th scope="col">Title</th>
+    <th scope="col">Artist</th>
+    <th scope="col">Genre</th>
+  </thead>
+  <tbody>
+    {% for row in allSongs: %}
+    <tr>
+      <td>{{row['SongId']}}</td>
+      <td>{{row['Title']}}</td>
+      <td>{{row['Artist']}}</td>
+      <td>{{row['Genre']}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+  <h2></h2>
+{% endblock content %}
